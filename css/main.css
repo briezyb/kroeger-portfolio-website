@@ -1,0 +1,12 @@
+@media screen and (min-width: 64em) {
+    .grid-container{
+    width: 80%;
+    padding-left: 6em;
+}
+}
+
+#about > div.position-absolute > img{
+    top: 0;
+    right: 0;
+}
+
