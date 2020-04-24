@@ -10,3 +10,13 @@
     right: 0;
 }
 
+/* ----- Media------*/
+
+#bg-hero{
+    background-image: url(https://via.placeholder.com/1200x600);
+    background-position:center;
+    background-repeat: no-repeat;
+    position: relative;
+    height: 30em; /*-- this was the only way I could get it to show--*/
+    
+}
