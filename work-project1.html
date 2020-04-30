@@ -7,22 +7,25 @@
     <title>home</title>
     <link rel="stylesheet" href="css/foundation.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://use.typekit.net/icr4fro.css">
   </head>
   <body>
     <div class="grid-x">
-      <div class="cell small-12 large-2" style="background-color: pink;">
+      <div class="cell small-12 large-2 " data-sticky-container id=header>
+        <div data-sticky data-options="marginTop:0;">
           <header>
-              <a href="#"><img src=""></a>
-              <nav>
+              <a href="#"><img src="img/briezy-logo@2x.png" class="img-responsive"></a>
+              <nav id="side-nav">
                   <ul>
-                      <li><a href="#work">Work</a></li>
-                      <li><a href="#about">About</a></li>
-                      <li><a href="#contact">Contact</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
                   </ul>
               </nav>
           </header>
+        </div>  
       </div>
-      <div class="cell small-12 large-10" style="background-color: orange;">
+      <div class="cell small-12 large-10">
         <div class="grid-x">
           <div class="cell small-12 medium-6" >
             <h2>Ten Thousand Villages</h2>
@@ -40,7 +43,6 @@
         <div class="cell small-12">
           <img src="https://via.placeholder.com/1000x600">
         </div>
-        <div>
           <div class=" cell small-12 orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
             <div class="orbit-wrapper">
               <div class="orbit-controls">
@@ -84,8 +86,18 @@
               <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
             </nav>
           </div>
-
-        </div>
+          <div>
+            <div class="cell small-4" id="buttons">
+              <div>
+                <a href="work-project8.html" class="previous-btn"></a>
+              </div>
+            </div>
+            <div class="cell small-4" id="next-btn">
+              <div>
+                <a href="work-project2.html" class="next-btn"></a>
+              </div>
+            </div>
+          </div>
         </div>
         </div>
 

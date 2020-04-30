@@ -1,18 +1,256 @@
+
+/* ----- Typography------*/
+
+html{
+    font-family: motiva-sans, sans-serif;
+    font-size: 1.2em;
+}
+
+h2{
+    font-family: harfang-pro, serif;
+    font-weight: 900;
+    font-size: 1.7em;
+}
+
+h3{
+    font-family: harfang-pro, serif;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+h2, h3{
+    color: #F5825F;
+}
+
+@media screen and (min-width: 40em) {
+    h2 {
+       font-size: 1.75rem; 
+       margin-bottom: 1rem;
+    }
+
+    html{
+        font-size: 1rem;
+    }
+}
+
+
+#span-text{
+    display: inline-block;
+    font-family: harfang-pro, serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+span > .body{
+    font-family: motiva-sans, sans-serif;
+    font-size: 1.2em;
+}
+
+/* ----- Navigation------*/
+
+
+
+#header nav li{
+    list-style: none;
+    font-family: harfang-pro, serif;
+    font-size: 1.3rem;
+    color: #282828;
+}
+
+#header nav a:hover{
+    color: #F5825F;
+}
+
+a{
+    color:#282828;
+}
+
+
+.title-bar {
+    background: #f2f3f2;
+}
+
+button.menu-icon::after {
+    border: 1px solid #333;
+}
+button.menu-icon:hover::after {
+    border: 1px solid #333;
+}
+.menu-icon::after {
+    background: #f2f3f2;
+    -webkit-box-shadow: 0 7px 0 #333, 0 14px 0 #333;
+    box-shadow: 0 7px 0 #333, 0 14px 0 #333;
+}
+.menu-icon:hover::after {
+    background: #f2f3f2;
+    -webkit-box-shadow: 0 7px 0 #333, 0 14px 0 #333;
+    box-shadow: 0 7px 0 #333, 0 14px 0 #333;
+}
+.top-bar {
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 0px 1px 4px #999;
+
+}
+li {
+    text-decoration: none;
+    list-style-type: none;
+    padding-top: .5em;
+}
+
+.top-bar-right {
+    margin: 0 auto;
+    background-color: #f2f3f2;
+}
+.top-bar-right ul {
+    background-color: #f2f3f2;
+}
+.top-bar-right ul {
+    margin-left: 0;
+}
+.top-bar-right a {
+    color: #333;
+}
+
+
 @media screen and (min-width: 64em) {
-    .grid-container{
-    width: 80%;
-    padding-left: 6em;
-}
+#header{
+    padding-left: 3em;
+    padding-right: 3em;
+    
+}    
+
+#side-nav ul{
+    margin-left: 2em;
 }
 
 
+
+}
+
+/* -----Footer------*/
+footer{
+    margin-top: 4em;
+}
+
+footer div{
+    border-top: 20px solid  #F5825F;
+}
+   
+
+
+/* -----Buttons------*/
+
+a:hover{
+    color:#F5825F;
+}
+
+a span.sprites{
+    display:none;
+    
+}
+
+#sprites li{
+    display: inline-block;
+    padding-right: 1em;
+    font-size: 1.5rem;
+}
+
+#sprites ul{
+    margin: 0;
+    
+}
 /* ----- Media------*/
 
+
 #bg-hero{
-    background-image: url(https://via.placeholder.com/1200x600);
+    background-image: url(../img/hero.svg);
     background-position:center;
     background-repeat: no-repeat;
     position: relative;
+    background-size: cover;
     height: 30em; /*-- this was the only way I could get it to show--*/
     
 }
+
+#buttons{
+    margin: 4rem 0 7rem 0 ;
+
+}
+
+.previous-btn{
+    background-image: url('../img/previous-button.svg');
+    background-repeat: no-repeat;
+    padding: .5em 3.5em;
+    background-position: -5px -5px;
+    
+}
+
+.previous-btn:hover{
+    background-position: -5px -55px;
+    
+}
+
+
+@media screen and (max-width: 39.9375em) {
+    .grid-x{
+        margin: .5em;
+    }
+}
+
+.grid-x{
+    margin: 0;
+}
+
+.grid-x .hero{
+    margin-top:0;
+}
+
+div > .grid-x{
+    margin-top: 4rem;
+}
+
+
+
+.container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  
+  .middle {
+    background-color: rgba(245,130,95,0.5);
+    transition: .5s ease;
+    
+    opacity: 0;
+    position: absolute;
+    top: 30%;
+    left: 45%;
+    font-family: harfang-pro, serif;
+    font-weight: 600;
+    transform: translate(-80%, -80%);
+    -ms-transform: translate(-80%, -80%);
+    
+  }
+  
+  .container:hover .image {
+    opacity: 0.5;
+  }
+  
+  .container:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    color: white;
+    font-size: 1.5rem;
+ 
+  }
