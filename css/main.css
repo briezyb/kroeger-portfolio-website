@@ -16,6 +16,7 @@ h3{
     font-family: harfang-pro, serif;
     font-weight: 600;
     font-size: 1.4em;
+    padding-top: .6em;
 }
 
 h2, h3{
@@ -122,13 +123,14 @@ li {
     }    
 
     #side-nav ul{
-        margin-left: 2em;
+        margin-left: .4em;
     }
 
     .top-bar {
         text-align: left;
     }
 }
+
 
 /* -----Footer------*/
 footer{
@@ -155,7 +157,7 @@ a span.sprites{
 #sprites li{
     display: inline-block;
     padding-right: 1em;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 #sprites ul{
@@ -163,6 +165,18 @@ a span.sprites{
     
 }
 /* ----- Media------*/
+#portrait-img{
+    padding-bottom: 2em;
+}
+
+@media screen and (min-width: 40em) {
+    #portrait-img{
+    padding-top: 4em;
+}
+    #sprites{
+        padding-top: 3.5em;
+    }
+}
 
 
 #bg-hero{
@@ -175,21 +189,24 @@ a span.sprites{
     
 }
 
+.icon{
+    text-align: center;
+}
+
 #buttons{
     margin: 4rem 0 7rem 0 ;
 
 }
 
-.previous-btn{
-    background-image: url('../img/previous-button.svg');
-    background-repeat: no-repeat;
-    padding: .5em 3.5em;
-    background-position: -5px -5px;
-    
-}
 
+.previous-btn{
+    height: 2em;
+    position: relative;
+
+}
 .previous-btn:hover{
     background-position: -5px -55px;
+    
     
 }
 
@@ -213,6 +230,16 @@ div > .grid-x{
 }
 
 
+/*padding for icons*/
+
+#icons div{
+        text-align:center;
+}
+
+
+
+
+
 
 .container {
     position: relative;
@@ -220,39 +247,45 @@ div > .grid-x{
   }
   
   .image {
-    opacity: 1;
     display: block;
     width: 100%;
     height: auto;
-    transition: .5s ease;
-    backface-visibility: hidden;
   }
   
-  .middle {
-    background-color: rgba(245,130,95,0.5);
-    transition: .5s ease;
-    
-    opacity: 0;
+  .overlay {
     position: absolute;
-    top: 30%;
-    left: 45%;
-    font-family: harfang-pro, serif;
-    font-weight: 600;
-    transform: translate(-80%, -80%);
-    -ms-transform: translate(-80%, -80%);
-    
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgba(245,130,95,0.7);
   }
   
-  .container:hover .image {
-    opacity: 0.5;
-  }
-  
-  .container:hover .middle {
+  .container:hover .overlay {
     opacity: 1;
   }
   
   .text {
     color: white;
+    font-family: harfang-pro, serif;
+    font-weight: 800;
     font-size: 1.5rem;
- 
+    position: absolute;
+    top: 30%;
+    left: 35%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
+
+  .text span{
+    font-family: motiva-sans, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 200;
+  }
+
+  
