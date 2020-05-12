@@ -4,6 +4,7 @@
 html{
     font-family: motiva-sans, sans-serif;
     font-size: 1.2em;
+    scroll-behavior: smooth;
 }
 
 h2{
@@ -16,7 +17,7 @@ h3{
     font-family: harfang-pro, serif;
     font-weight: 600;
     font-size: 1.4em;
-    padding-top: .6em;
+    padding-top: .3em;
 }
 
 h2, h3{
@@ -135,19 +136,45 @@ li {
 /* -----Footer------*/
 footer{
     margin-top: 4em;
+    background-color:   #F5825F;
+    color: #fff;
 }
 
-footer div{
-    border-top: 20px solid  #F5825F;
+footer > div{
+    margin: 0 auto;
+    text-align: center;
+    padding: 2em 0;
+    width: 100%;
+    font-family: harfang-pro, serif;
+    font-size: .8rem;
 }
+
+body > footer > div > p{
+    margin: 0;
+}
+
+
    
 
 
 /* -----Buttons------*/
 
-a:hover{
-    color:#F5825F;
+a .resume-btn{
+    color: #F5825F;
 }
+
+a:hover{
+    color: #000;
+}
+
+@media screen and (min-width: 40em) {
+   a:hover{
+    color:#F5825F;
+    transition: 0.3s;
+} 
+}
+
+
 
 a span.sprites{
     display:none;
@@ -164,6 +191,87 @@ a span.sprites{
     margin: 0;
     
 }
+
+.center{
+    margin: 0 auto;
+    width: 80%;
+    padding-top: 1em;
+}
+
+a .resume-btn{
+    padding-top: 5em;
+}
+
+.resume-btn{
+    
+    border: solid 2px #F5825F;
+    border-radius: 5px;
+    font-family: harfang-pro, serif;
+    font-weight: 600;
+    color: #F5825F;
+    padding: 15px 5.7em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.2rem;
+    margin: 0 auto;
+}
+
+.resume-btn:hover{
+    background-color: #F5825F;     
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+
+@media screen and (min-width: 40em) {
+    .resume-btn{
+        padding: 15px 2em;   
+        font-size: 1.2rem;    
+    } 
+    .center{
+        margin: 0;
+        
+    }
+ }
+
+ #top > div:nth-child(2) p{
+    display: none;
+ }
+
+.previous-btn:hover{
+    background-position: 20px 35px;
+}
+
+.previous-btn {
+    background-image: url(../img/previous-btn.png);
+    background-position: 20px 0; 
+    display: inline-block;
+    height: 36px;
+    width: 150px; 
+  }
+
+.next-btn:hover{
+    background-position: -87px 38px;
+}
+
+.next-btn{
+    background-image: url(../img/next-btn.png);
+    background-position: -87px 0;
+    width: 95px;
+    height: 38px;
+    display: inline-block;
+    
+}
+
+
+
+
+
+
 /* ----- Media------*/
 #portrait-img{
     padding-bottom: 2em;
@@ -193,22 +301,19 @@ a span.sprites{
     text-align: center;
 }
 
-#buttons{
-    margin: 4rem 0 7rem 0 ;
-
+body > div > div.cell.small-12.large-10 > div:nth-child(3){
+    padding-left: 3em;
 }
 
-
-.previous-btn{
-    height: 2em;
-    position: relative;
-
+.workpiece{
+    padding: .6em 0;
 }
-.previous-btn:hover{
-    background-position: -5px -55px;
-    
-    
-}
+
+@media screen and (min-width: 40em) {
+    .workpiece{
+        padding: 1em 0;
+    }     
+ }
 
 
 @media screen and (max-width: 39.9375em) {
@@ -225,9 +330,31 @@ a span.sprites{
     margin-top:0;
 }
 
+
+@media screen and (max-width: 39.9375em) {
+  #contact > div.cell{
+        margin: 0;
+    } 
+     
+} 
+
 div > .grid-x{
     margin-top: 4rem;
 }
+
+body > div > div.cell.small-12.large-10.project > div.grid-x, .spacing ,#buttons {
+    padding: 0 1.5em;
+}
+
+@media screen and (min-width: 40em) {
+   body > div > div.cell.small-12.large-10.project , #buttons {
+        padding: 0 4em;
+    } 
+
+    
+}
+
+
 
 
 /*padding for icons*/
@@ -237,10 +364,25 @@ div > .grid-x{
 }
 
 
+.text {
+    font-family: harfang-pro, serif;
+    font-weight: 800;
+    font-size: 1.2rem;
+  }
 
+  .text span{
+    font-family: motiva-sans, sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+  }
 
+  div .text{
+      padding: .8em 0 1.5em 0;
+  }
 
-
+/*hovers for works*/
+@media screen and (min-width: 40em) {
+    
 .container {
     position: relative;
     width: 50%;
@@ -262,7 +404,7 @@ div > .grid-x{
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgba(245,130,95,0.7);
+    background-color: rgba(245,130,95,0.9);
   }
   
   .container:hover .overlay {
@@ -275,17 +417,34 @@ div > .grid-x{
     font-weight: 800;
     font-size: 1.5rem;
     position: absolute;
-    top: 30%;
-    left: 35%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    top: 20%;
+    left: 20%;
+    -webkit-transform: translate(-20%, -20%);
+    -ms-transform: translate(-20%, -20%);
+    transform: translate(-20%, -20%);
   }
 
-  .text span{
+.text span{
     font-family: motiva-sans, sans-serif;
     font-size: 1.2rem;
     font-weight: 200;
   }
+
+  
+ 
+     
+ }
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+    .text{
+        font-size: 1.2rem;
+    }
+    .text span{
+        font-size: 1rem;  
+      }
+
+  }
+  
+
 
   

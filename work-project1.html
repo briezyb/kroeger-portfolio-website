@@ -12,20 +12,32 @@
   <body>
     <div class="grid-x">
       <div class="cell small-12 large-2 " data-sticky-container id=header>
-        <div data-sticky data-options="marginTop:0;">
+        <div data-sticky data-sticky-on="small" data-options="marginTop:0;">
           <header>
-              <a href="#"><img src="img/briezy-logo@2x.png" class="img-responsive"></a>
-              <nav id="side-nav">
-                  <ul>
+            <div class="title-bar" data-responsive-toggle="example-menu" data-hide-for="large">
+              <button class="menu-icon" type="button" data-toggle></button>
+              
+            </div>
+            
+            <div class="top-bar" id="example-menu" >
+              <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                  <a href="index.html"><img src="img/briezy-logo@2x.png" class="img-responsive show-for-large" ></a>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                  </ul>
-              </nav>
+                  
+                </ul>
+              </div>
+            </div>
+
+
+              
+              
           </header>
         </div>  
       </div>
-      <div class="cell small-12 large-10">
+      <div class="cell small-12 large-10 project" id="top">
         <div class="grid-x">
           <div class="cell small-12 medium-6" >
             <h2>Ten Thousand Villages</h2>
@@ -33,76 +45,50 @@
 
           <div class="cell small-12 medium-6" >
             <h3>Annual Report</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
-              et dolore magna aliqua. Tristique risus nec feugiat in fermentum. Enim sed faucibus turpis in eu mi bibendum. 
-              At in tellus integer feugiat. </p>
+            <p>An annual report that highlights the progress of the many 
+              artisans they work with to promote growth in developing communities. The handmade elements 
+              and patterns are inspired by African pottery to showcase the collaboration that fair trade brings 
+              to communities across the globe.</p>
           </div>
 
-          
-        </div>
-        <div class="cell small-12">
-          <img src="img/P1-annual-report-front.jpg" width="100%">
-        </div>
-          <div class=" cell small-12 orbit" role="region" aria-label="Favorite Space Pictures" data-orbit>
-            <div class="orbit-wrapper">
-              <div class="orbit-controls">
-                <button class="orbit-previous"><span class="show-for-sr">Previous Slide</span>&#9664;&#xFE0E;</button>
-                <button class="orbit-next"><span class="show-for-sr">Next Slide</span>&#9654;&#xFE0E;</button>
-              </div>
-              <ul class="orbit-container">
-                <li class="is-active orbit-slide">
-                  <figure class="orbit-figure">
-                    <img class="orbit-image" src="https://placehold.it/1200x600/999?text=Slide-1" alt="Space">
-                    <figcaption class="orbit-caption">Space, the final frontier.</figcaption>
-                  </figure>
-                </li>
-                <li class="orbit-slide">
-                  <figure class="orbit-figure">
-                    <img class="orbit-image" src="https://placehold.it/1200x600/888?text=Slide-2" alt="Space">
-                    <figcaption class="orbit-caption">Lets Rocket!</figcaption>
-                  </figure>
-                </li>
-                <li class="orbit-slide">
-                  <figure class="orbit-figure">
-                    <img class="orbit-image" src="https://placehold.it/1200x600/777?text=Slide-3" alt="Space">
-                    <figcaption class="orbit-caption">Encapsulating</figcaption>
-                  </figure>
-                </li>
-                <li class="orbit-slide">
-                  <figure class="orbit-figure">
-                    <img class="orbit-image" src="https://placehold.it/1200x600/666&text=Slide-4" alt="Space">
-                    <figcaption class="orbit-caption">Outta This World</figcaption>
-                  </figure>
-                </li>
-              </ul>
-            </div>
-            <nav class="orbit-bullets">
-              <button class="is-active" data-slide="0">
-                <span class="show-for-sr">First slide details.</span>
-                <span class="show-for-sr" data-slide-active-label>Current Slide</span>
-              </button>
-              <button data-slide="1"><span class="show-for-sr">Second slide details.</span></button>
-              <button data-slide="2"><span class="show-for-sr">Third slide details.</span></button>
-              <button data-slide="3"><span class="show-for-sr">Fourth slide details.</span></button>
-            </nav>
+          <div class="cell small-12 workpiece">
+            <img src="img/P1-annual-report-front.jpg" width="100%">
           </div>
+          <div class="cell small-12 workpiece">
+            <img src="img/P1-annual-report-spread1.jpg" width="100%">
+          </div>
+          <div class="cell small-12 workpiece">
+            <img src="img/P1-annual-report-spread2.jpg" width="100%">
+          </div>
+        </div>
+       
+        
+          <div class="grid-x">
+            <div class="cell small-2">
+                <div class="previous-btn">
+                  <a href="work-project8.html" id="prev"><p>previous</p><img>
+                  </a>
+                 </div> 
+            </div>
+            
+            <div class="cell small-2 small-offset-5 medium-offset-7 large-offset-8">
+              <div class="next-btn">
+                <a href="work-project2.html" ><img>
+                </a>
+               </div> 
+            </div>       
+          </div>
+
+        </div>
+        </div>
+        <footer>
           <div>
-            <div class="cell small-4" id="buttons">
-              <div>
-                <a href="work-project8.html" class="previous-btn"><img src="img/previous-button.svg" width="100px"> </a>
-              </div>
-            </div>
-            <div class="cell small-4" id="next-btn">
-              <div>
-                <a href="work-project2.html" class="next-btn"></a>
-              </div>
-            </div>
+            <p> Made with &hearts; by Brieanna Kroeger </p>
           </div>
-        </div>
-        </div>
-
+        </footer>
 
     <script src="js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="js/vendor/retina.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
