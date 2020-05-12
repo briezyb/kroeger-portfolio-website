@@ -238,8 +238,8 @@ a .resume-btn{
     }
  }
 
- #top > div:nth-child(2) p{
-    display: none;
+ #top > div:nth-child(2) a{
+    transition: none;
  }
 
 .previous-btn:hover{
